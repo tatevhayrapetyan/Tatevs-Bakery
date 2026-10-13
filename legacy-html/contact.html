@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tatev's Bakery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" />
+
+</head>
+<body>
+    <header>
+        <div class ="container">
+            <h1 class="logo">Tatev's Bakery</h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Main</a></li>
+                    <li><a href="contact.html" class="active" aria-current="page">Contact</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="contact-container-big">
+        <div class="contact-container">
+            <div class="content">
+                <div class="left-side">
+                    <!-- Address -->
+                    <div class="address details">
+                        <i class="icon material-symbols-rounded">location_on</i>
+                        <div class="topic">Address</div>
+                        <div class="contact-text-one">Alek Mankuyan 44</div>
+                        <div class="contact-text-two">Yerevan, Armenia</div>
+                    </div>
+                    <!-- Phone -->
+                    <div class="phone details">
+                        <i class="icon material-symbols-rounded">call</i>
+                        <div class="topic">Phone</div>
+                        <div class="contact-text-one">+374 44 102345</div>
+                        <div class="contact-text-two">+374 91 987654</div>
+                    </div>
+                    <!-- Email -->
+                    <div class="email details">
+                        <i class="icon material-symbols-rounded">mail</i>
+                        <div class="topic">Email</div>
+                        <div class="contact-text-one">tatev.bakery@gmail.com</div>
+                        <div class="contact-text-two">tatev.ysu@gmail.com</div>
+                    </div>
+                </div>
+                <div class="right-side">
+                    <div class="topic-text">Send us a message!</div>
+                    <p> If you have any requests, questions or suggestions, you can send me a message from here. It's my pleasure to help you!</p>
+                    <form class="contact-form">
+                        <div class="input-box">
+                            <input type="text" name="name" placeholder="Enter your name" aria-label="Your name" required>
+                        </div>
+                        <div class="input-box">
+                            <input type="email" name="email" placeholder="Enter your email" aria-label="Your email" required>
+                        </div>
+                        <div class="input-box message-box">
+                            <textarea name="message" placeholder="Enter your message" aria-label="Your message" required></textarea>
+                        </div>
+                        <div class="submit-button">
+                            <input type="submit" value="Submit">
+                        </div>
+                        <p class="form-status" aria-live="polite"></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div> 
+    <footer class="site-footer">
+        <p>&copy; 2026 Tatev's Bakery · Recipes from <a href="https://www.themealdb.com" target="_blank" rel="noopener">TheMealDB</a></p>
+    </footer>
+
+    <!-- Linking custom script -->
+    <script src="script.js"></script>
+</body>
+</html>
