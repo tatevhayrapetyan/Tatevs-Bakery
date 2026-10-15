@@ -1,6 +1,5 @@
 import { useState } from "react";
 
-const BAKERY_EMAIL = "tatev.bakery@gmail.com";
 const emptyForm = { name: "", email: "", message: "" };
 
 function validate(values) {
@@ -27,6 +26,7 @@ export default function ContactForm() {
     setValues((current) => ({ ...current, [name]: value }));
     // Clear a field's error as soon as the user starts fixing it
     setErrors((current) => ({ ...current, [name]: undefined }));
+    setStatus("");
   }
 
   function handleSubmit(event) {
@@ -39,13 +39,7 @@ export default function ContactForm() {
       return;
     }
 
-    // Opens the visitor's email app with the message filled in
-    const subject = "Message from " + values.name.trim();
-    const body = values.message.trim() + "\n\nFrom: " + values.name.trim() + " (" + values.email.trim() + ")";
-    window.location.href =
-      "mailto:" + BAKERY_EMAIL + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
-
-    setStatus("Thank you! Your email app should open so you can send the message.");
+    setStatus("Thank you, " + values.name.trim() + "! Your message has been received.");
     setValues(emptyForm);
   }
 
